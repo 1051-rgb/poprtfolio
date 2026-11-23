@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal portfolio of Ahmed Samer Ahmed">
+<title>Ahmed Samer Ahmed | About Me</title>
+<style>
+:root{--bg:#080d24;--panel:#141b3b;--panel2:#1a2450;--text:#f5f3ff;--muted:#c3c8e8;--purple:#9862ff;--cyan:#38d9ff;--line:#343d78}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(ellipse at 80% 0%,#20245d 0%,var(--bg) 48%);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:rgba(7,11,31,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-wrap{max-width:1200px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:800;font-size:18px;white-space:nowrap}.brand span{color:var(--purple)}
+nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+nav a{font-size:13px;color:var(--muted);padding:9px 12px;border-radius:22px;transition:.2s}
+nav a:hover,nav a.active{background:#29245b;color:white}
+.menu-btn{display:none;background:transparent;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:20px}
+.hero{max-width:1200px;margin:28px auto 0;padding:42px 22px 52px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:36px}
+.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(36px,5vw,62px);line-height:1.08;margin:12px 0 18px;letter-spacing:-2px}
+h1 span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:570px;font-size:17px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+.tag{border:1px solid var(--line);background:#121a3b;border-radius:30px;padding:7px 12px;color:#dedcff;font-size:13px}
+.cta{display:inline-block;margin-top:8px;background:linear-gradient(100deg,#713cf0,#3b8fff);padding:12px 20px;border-radius:28px;font-weight:700;box-shadow:0 8px 25px #653cff55}
+.visual{min-height:330px;border:1px solid #4852a1;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(135deg,#20265c,#0c1537 60%,#19275d);box-shadow:0 18px 55px #0008}
+.visual:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#743dff55;filter:blur(40px);top:10px;right:10px}
+.visual-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:20px}
+.avatar-art{width:145px;height:145px;border-radius:50%;border:3px solid #9d7bff;background:linear-gradient(145deg,#293c84,#10182f);display:grid;place-items:center;font-size:65px;box-shadow:0 0 35px #744bff88}
+.desk{width:88%;height:90px;border-radius:15px;background:linear-gradient(180deg,#273b72,#10162e);border:1px solid #6171c9;display:flex;justify-content:center;align-items:center;gap:20px;box-shadow:0 12px 25px #0008}
+.monitor{width:115px;height:68px;border:5px solid #090e22;border-radius:7px;background:linear-gradient(135deg,#2767c9,#9b5aff);display:grid;place-items:center;font-size:25px}
+.desk-icons{font-size:34px}
+.visual-caption{color:#e8e5ff;font-weight:700;letter-spacing:.4px}
+section.content{max-width:1200px;margin:0 auto;padding:36px 22px 60px;scroll-margin-top:85px}
+.section-head{text-align:center;margin-bottom:28px}
+.section-head h2{font-size:30px}.section-head p{color:var(--muted);margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(145deg,#171f43,#101731);border:1px solid var(--line);border-radius:17px;padding:20px;min-height:145px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-5px);border-color:var(--purple)}
+.card .icon{font-size:29px;margin-bottom:8px}.card h3{font-size:16px;color:#c5a8ff;margin-bottom:6px}.card p,.card li{color:var(--muted);font-size:14px}
+.card ul{padding-left:18px}
+.banner{margin-top:28px;padding:26px;border-radius:20px;background:linear-gradient(100deg,#39228d,#173b83);border:1px solid #6854ce;text-align:center}
+.banner h2{font-size:25px;margin-bottom:6px}.banner p{color:#e3e8ff}
+footer{text-align:center;border-top:1px solid var(--line);padding:22px;color:var(--muted);font-size:13px}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.visual{min-height:280px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.nav-wrap{flex-wrap:wrap}.menu-btn{display:block}nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:8px 0}nav.open{display:flex}nav a{padding:11px 14px}.hero{padding-top:30px}.grid{grid-template-columns:1fr}.card{min-height:0}h1{letter-spacing:-1px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="nav-wrap">
+  <a class="brand" href="#home"><span>✦</span> Ahmed Samer Ahmed</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav id="navbar" aria-label="Main navigation">
+   <a href="#home" class="active">Home</a><a href="#about">About Me</a><a href="#personality">Personality</a><a href="#achievements">Achievements</a><a href="#future">My Future</a>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div>
+  <div class="eyebrow">Welcome to my personal website</div>
+  <h1>Hello, I'm<br><span>Ahmed Samer Ahmed</span></h1>
+  <p>Friendly, ambitious and creative. I enjoy technology, digital design, football and discovering new ideas. Explore my interests, skills, achievements and dreams.</p>
+  <div class="tags"><span class="tag">💡 Creative</span><span class="tag">🤝 Friendly</span><span class="tag">🚀 Determined</span></div>
+  <a class="cta" href="#about">Explore My World ↓</a>
+ </div>
+ <div class="visual" role="img" aria-label="Illustration representing creativity, technology, gaming and learning">
+  <div class="visual-inner">
+   <div class="avatar-art">🧑‍💻</div>
+   <div class="desk"><div class="monitor">💻</div><div class="desk-icons">🎮 ⚽ 🎨</div></div>
+   <div class="visual-caption">CREATE • LEARN • ACHIEVE</div>
+  </div>
+ </div>
+</section>
+<section class="content" id="about">
+ <div class="section-head"><h2>👋 About Me</h2><p>15 things that describe who I am</p></div>
+ <div class="grid">
+  <article class="card"><div class="icon">👤</div><h3>1. Full Name</h3><p>My full name is Ahmed Samer Ahmed.</p></article>
+  <article class="card"><div class="icon">🌟</div><h3>2. About Me</h3><p>I am friendly, ambitious and hardworking. I enjoy learning new things, technology and creativity.</p></article>
+  <article class="card" id="personality"><div class="icon">💡</div><h3>3. My Personality</h3><ul><li>Creative – I enjoy new ideas.</li><li>Friendly – I like helping others.</li><li>Determined – I keep trying.</li></ul></article>
+  <article class="card"><div class="icon">🎮</div><h3>4. My Hobbies</h3><p>I enjoy video games, technology, watching videos, spending time with friends and learning.</p></article>
+  <article class="card"><div class="icon">🎨</div><h3>5. My Favourite Art</h3><p>Digital design, because I enjoy creating things with technology and expressing my ideas.</p></article>
+  <article class="card"><div class="icon">⚽</div><h3>6. My Favourite Sport</h3><p>Football, because it is exciting and teaches teamwork.</p></article>
+  <article class="card"><div class="icon">❤️</div><h3>7. My Favourite Things</h3><p>My family and friends, technology and video games, and having fun while learning.</p></article>
+  <article class="card"><div class="icon">🛠️</div><h3>8. My Skills</h3><p>Problem-solving, using technology and creative thinking.</p></article>
+  <article class="card"><div class="icon">✨</div><h3>9. My Hidden Talent</h3><p>I can come up with creative ideas and imagine projects that could become real.</p></article>
+  <article class="card" id="achievements"><div class="icon">🏆</div><h3>10. My Greatest Achievement</h3><p>Completing school projects that required creativity, effort and problem-solving.</p></article>
+  <article class="card"><div class="icon">🌍</div><h3>11. My Dreams</h3><p>I dream of becoming a successful businessman or technology entrepreneur and creating my own company.</p></article>
+  <article class="card"><div class="icon">👨‍👩‍👦</div><h3>12. My Inspiration</h3><p>My family inspires me. They teach me to work hard, be responsible and never give up.</p></article>
+  <article class="card"><div class="icon">📚</div><h3>13. My Challenge</h3><p>Time management can be difficult, and I want to improve by planning tasks and avoiding distractions.</p></article>
+  <article class="card"><div class="icon">🔥</div><h3>14. My Favourite Motto</h3><p>“My only competition is the person I was yesterday.” It reminds me to improve every day.</p></article>
+  <article class="card" id="future"><div class="icon">🚀</div><h3>15. My Future Self</h3><p>In 10 years, I hope to have a successful career, own a business, travel and make my family proud.</p></article>
+ </div>
+ <div class="banner"><h2>✨ My Future Starts Today!</h2><p>I believe every big achievement starts with a small step. I will keep learning, working hard and believing in my dreams.</p></div>
+</section>
+</main>
+<footer>© 2026 Ahmed Samer Ahmed · My Personal Website ❤️</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navbar=document.getElementById('navbar');
+menuBtn.addEventListener('click',()=>{
+ const opened=navbar.classList.toggle('open');
+ menuBtn.setAttribute('aria-expanded',String(opened));
+ menuBtn.textContent=opened?'✕':'☰';
+});
+document.querySelectorAll('#navbar a').forEach(link=>{
+ link.addEventListener('click',()=>{
+  navbar.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  menuBtn.textContent='☰';
+ });
+});
+const sections=[...document.querySelectorAll('main section[id]')];
+const links=[...document.querySelectorAll('#navbar a')];
+function updateActive(){
+ let current='home';
+ for(const section of sections){
+  if(window.scrollY+150>=section.offsetTop) current=section.id;
+ }
+ links.forEach(a=>{
+  const target=a.getAttribute('href').slice(1);
+  a.classList.toggle('active',
+   target===current ||
+   (current==='personality' && target==='personality') ||
+   (current==='achievements' && target==='achievements') ||
+   (current==='future' && target==='future')
+  );
+ });
+}
+window.addEventListener('scroll',updateActive,{passive:true});
+updateActive();
+</script>
+</body>
+</html>
